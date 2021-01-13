@@ -9,7 +9,7 @@ public class TestController {
 	private String field5;
 	
 	// Constructor
-	//¼­¿¬ÀÌÁÖ¼®´ŞÀ½
+	// ì£¼ì„ì„ ë‹¬ì•„ë´…ë‹ˆë‹¤
 	// Method
-	//³ªµµ³ªµµÁÖ¼®´ŞÀ½
+	
 }
