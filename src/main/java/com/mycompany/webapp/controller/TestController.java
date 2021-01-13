@@ -8,10 +8,4 @@ public class TestController {
 	
 	private String field5;
 	
-	// Constructor
-	// 주석을 달아봅니다
-	//�������ּ����� ����
-	// Method
-	//���������ּ�����
-	// 하이
 }
