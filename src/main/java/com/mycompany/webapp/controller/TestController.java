@@ -10,6 +10,8 @@ public class TestController {
 	
 	// Constructor
 	// 주석을 달아봅니다
+	//�������ּ����� ����
 	// Method
-	
+	//���������ּ�����
+	// 하이
 }
