@@ -6,6 +6,8 @@ public class TestController {
 	private String field2;
 	private String field3;
 	
+	private String field5;
+	
 	// Constructor
 	
 	// Method
