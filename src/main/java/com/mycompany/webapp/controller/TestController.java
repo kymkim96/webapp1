@@ -11,5 +11,4 @@ public class TestController {
 	// Constructor
 	
 	// Method
-	//¡÷ºÆ 
 }
