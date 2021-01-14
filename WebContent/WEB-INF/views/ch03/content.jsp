@@ -26,13 +26,13 @@
 					<div class="sector">
 						<h5>GET 방식 데이터 전달</h5>
 						<div>
-							<a class="btn btn-info btn-sm" href="method2?param1=문자열&param2=5&param3=3.14&param4=true&param5=2021-01-14">데이터 전달</a>
+							<a class="btn btn-info btn-sm" href="method1?param1=문자열&param2=5&param3=3.14&param4=true&param5=2021-01-14">데이터 전달</a>
 						</div>
 					</div>
 					<div class="sector">
 						<h5>POST 방식 데이터 전달</h5>
 						<div>
-							<form method="post" action="method2">
+							<form method="post" action="method4">
 								<input type="text" name="param1" value="문자열"/><br/>
 								<input type="number" name="param2" value="5"/><br/>
 								<input type="number" name="param3" value="3.14"/><br/>
