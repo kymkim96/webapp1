@@ -22,5 +22,25 @@
 			Ch05.
 			<a href="<%=application.getContextPath()%>/ch05/content">Header / Cookie</a>
 		</li>
-	</ul>			
+		<li class="chapter">
+			Ch06.
+			<a href="<%=application.getContextPath()%>/ch06/content">Forward / Redirect</a>
+		</li>
+		<li class="chapter">
+			Ch07.
+			<a href="<%=application.getContextPath()%>/ch07/content">Data Delivery</a>
+		</li>
+	</ul>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
