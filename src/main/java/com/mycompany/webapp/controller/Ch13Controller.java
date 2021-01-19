@@ -123,7 +123,6 @@ public class Ch13Controller {
 	public String fileUpload(@Value("${fileupload}") String saveDirPath) {
 		logger.info("실행");
 		
-		String saveFilePath = "";
 		logger.info("fileupload: " + saveDirPath);
 		service7.method();
 		return "redirect:/ch13/content";
