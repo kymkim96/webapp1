@@ -99,5 +99,11 @@
 			<systemPath>${basedir}/WebContent/WEB-INF/lib/ojdbc6.jar</systemPath>
 		</dependency>
 		
+		<dependency>
+		    <groupId>org.json</groupId>
+		    <artifactId>json</artifactId>
+		    <version>20201115</version>
+		</dependency>
+		
 	</dependencies>
 </project>

@@ -46,6 +46,10 @@
 			Ch14.
 			<a href="<%=application.getContextPath()%>/ch14/content">Data Access</a>
 		</li>
+		<li class="chapter">
+			Ch14.
+			<a href="<%=application.getContextPath()%>/ch14/boardlist">Data Access(Board Sample)</a>
+		</li>
 	</ul>
 </div>
 

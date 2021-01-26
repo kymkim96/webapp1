@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mybatis.mapper.boards">
+	<select id="selectAll" resultType="board">
+		select 
+			bno,
+			btitle,
+			bwriter,
+			bhitcount,
+			bdate
+		from boards
+	</select>
+	<!-- sql 작성 시, 띄어쓰기와 공백 조심 -->
+	<insert id="insert" parameterType="board">
+		insert into boards
+		(bno, btitle, bcontent, bwriter, bdate, bhitcount)
+		values (bno_seq.nextval, #{btitle}, #{bcontent}, #{bwriter}, sysdate, 0)
+	</insert>
+</mapper>
