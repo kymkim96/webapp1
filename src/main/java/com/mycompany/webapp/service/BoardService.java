@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import com.mycompany.webapp.dao.Ch14BoardDao;
 import com.mycompany.webapp.dto.Ch14Board;
+import com.mycompany.webapp.dto.Ch14Pager;
 
 @Service
 public class BoardService {
@@ -25,8 +26,43 @@ public class BoardService {
 		return list;
 	}
 	
+	public List<Ch14Board> getBoardList(Ch14Pager pager) {
+		
+		int totalRows = boardDao.countAll();
+		
+		List<Ch14Board> list = boardDao.selectByPage(pager);
+		return list;
+	}
+	
 	public void saveBoard(Ch14Board board) {
 		boardDao.insert(board);
+	}
+
+	public int getTotalRows() {
+		
+		int totalRows = boardDao.countAll();
+		return totalRows;
+	}
+
+	public Ch14Board getBoard(int bno) {
+		
+		Ch14Board board = boardDao.selectByPk(bno);
+		return board;
+	}
+
+	public void updateBoard(Ch14Board board) {
+		
+		boardDao.update(board);
+	}
+
+	public void deleteBoard(int bno) {
+		
+		boardDao.delete(bno);
+	}
+
+	public void addHitcount(int bno) {
+		
+		boardDao.updateHitcount(bno);
 	}
 
 }

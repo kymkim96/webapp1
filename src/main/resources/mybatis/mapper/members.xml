@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="members">
+	<select id="selectByPk" 
+			parameterType="string"
+			resultType="member"
+			>
+		select mid, mname, mpassword, mphotosname, mphotooname, mphototype
+		from members
+		where mid=#{mid}
+	</select>
+	
+	<insert id="insert" parameterType="member">
+		<if test="mphotosname == null">
+			insert into members (
+				mid, mname, mpassword
+			)
+			values (
+				#{mid}, #{mname}, #{mpassword}
+			)
+		</if>
+		<if test="mphotosname != null">
+			insert into members (
+				mid, mname, mpassword, mphotosname, mphotooname, mphototype
+			)
+			values (
+				#{mid}, #{mname}, #{mpassword}, #{mphotosname}, #{mphotooname}, #{mphototype}
+			)
+		</if>
+	</insert>
+</mapper>

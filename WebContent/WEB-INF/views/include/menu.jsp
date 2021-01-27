@@ -48,7 +48,7 @@
 		</li>
 		<li class="chapter">
 			Ch14.
-			<a href="<%=application.getContextPath()%>/ch14/boardlist">Data Access(Board Sample)</a>
+			<a href="<%=application.getContextPath()%>/ch14/boardlist2">Data Access(Board Sample)</a>
 		</li>
 	</ul>
 </div>
