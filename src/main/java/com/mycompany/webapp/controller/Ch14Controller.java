@@ -2,12 +2,12 @@ package com.mycompany.webapp.controller;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -32,10 +32,13 @@ import org.springframework.web.multipart.MultipartFile;
 import com.mycompany.webapp.dto.Ch14Board;
 import com.mycompany.webapp.dto.Ch14Employee;
 import com.mycompany.webapp.dto.Ch14Member;
+import com.mycompany.webapp.dto.Ch14Order;
+import com.mycompany.webapp.dto.Ch14OrderItem;
 import com.mycompany.webapp.dto.Ch14Pager;
 import com.mycompany.webapp.service.BoardService;
 import com.mycompany.webapp.service.Ch14EmployeeService;
 import com.mycompany.webapp.service.Ch14MemberService;
+import com.mycompany.webapp.service.Ch14OrderService;
 
 @Controller
 @RequestMapping("/ch14")
@@ -391,6 +394,34 @@ public class Ch14Controller {
 		os.flush();
 		os.close();
 		is.close();
+	}
+	
+	@Resource
+	private Ch14OrderService orderService;
+	
+	@GetMapping("/order")
+	public String order() {
+		
+		// 주문 정보 얻기
+		Ch14Order order = new Ch14Order();
+		order.setMid("winter");
+		order.setAddress("서울시 송파구");
+		
+		// 주문 상품 정보 얻기(장바구니에서 가져와야 됨)
+		List<Ch14OrderItem> orderItems = new ArrayList<>();
+		Ch14OrderItem oi1 = new Ch14OrderItem();
+		oi1.setPid("다이아몬드");
+		oi1.setAmount(100);
+		orderItems.add(oi1);
+		Ch14OrderItem oi2 = new Ch14OrderItem();
+		oi2.setPid("루비");
+		oi2.setAmount(50);
+		orderItems.add(oi2);
+		
+		// 주문 처리
+		orderService.order(order, orderItems);
+		
+		return "ch14/content";
 	}
 }
 
